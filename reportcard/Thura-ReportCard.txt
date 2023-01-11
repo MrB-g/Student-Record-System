@@ -1,0 +1,5 @@
+Thura : Algebra  : 4 : 4.05556
+Thura : Physics : 5 : 4.05556
+Thura : English  : 3 : 4.05556
+Thura : Economics  : 5 : 4.05556
+Thura : Chemistry : 2 : 4.05556
