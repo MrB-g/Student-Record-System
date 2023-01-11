@@ -11,7 +11,6 @@
 #include "./resource/course.cpp"
 #include "./resource/grade.cpp"
 #include "./resource/studentRecord.cpp"
-#include "./resource/textOperator.cpp"
 
 using namespace std;
 
@@ -24,9 +23,20 @@ studentRecord SR;
 int main(){
     initializer();
     int stdId;
+    string print;
+
     cout << "Type Student ID : ";
     cin >> stdId;
     SR.getReportCard(stdId);
+
+    cout << "Do you want to print that report? ";
+    cin >> print;
+
+    if(print == "Yes"){
+        cout << "Successly printed. You can check your printed report in the reportcard file." << endl;
+        SR.printReportCard(stdId);
+    }
+
     return 0;
 }
 

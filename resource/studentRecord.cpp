@@ -82,12 +82,23 @@ std::string studentRecord::getCourseName(int courId){
 void studentRecord::getReportCard(int stdId){
     for(grade& grad : grades){
         if(grad.getStudentId() == stdId){
-            std::cout << getStudentName(grad.getStudentId()) << " " << getCourseName(grad.getCourseId()) << " " << grad.getGrade() <<  " " << getGpa(stdId) << std::endl; 
+            std::cout << getStudentName(grad.getStudentId()) << " : " << getCourseName(grad.getCourseId()) << " : " << grad.getGrade() <<  " : " << getGpa(stdId) << std::endl; 
         } else {
             continue;
         }
     }
 }
 
+void studentRecord::printReportCard(int stdId){
+    std::ofstream reportFile("./reportcard/" + getStudentName(stdId) + "-ReportCard.txt");
+    for(grade& grad : grades){
+        if(grad.getStudentId() == stdId){
+            reportFile << getStudentName(grad.getStudentId()) << " : " << getCourseName(grad.getCourseId()) << " : " << grad.getGrade() << " : " << getGpa(stdId) << std::endl;            
+        } else {
+            continue;
+        }
+    }
+    reportFile.close();
+}
 
 

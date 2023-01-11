@@ -46,9 +46,9 @@ class studentRecord {
         void addCourse(course course_i);
         void addStudent(student student_i);
         void addGrade(grade grade_i);
-
         
         void getReportCard(int);
+        void printReportCard(int);
         std::string getStudentName(int);
         std::string getCourseName(int);
 
